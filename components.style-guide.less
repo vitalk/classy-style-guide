@@ -1,0 +1,79 @@
+// Style Guide.
+
+
+@classy-style-guide-namespace: ~"@{classy-namespace}style-guide";
+
+
+#classy-style-guide-vars {
+    @b:   #fafafa;
+    @bo:  #eee;
+    @bor: .2em;
+    @c:   #444;
+}
+
+
+// 1. Add a more empty space for breeze.
+// 2. Use tiny border to separate subsections (and elements as well) from
+//    each other.
+// 3. Apply border radius to element. Ensure the guide reference uses the same
+//    value and don't override parent's element.
+// 4. Use relative position to create a new positioning context and to pull
+//    element modifier to the upper right edge.
+.@{classy-style-guide-namespace} {
+    #classy-style-guide-vars;
+
+
+    margin-top: @classy-unit; // 1
+    margin-bottom: @classy-unit; // 1
+
+    border: 1px solid @bo; // 2
+    .border-radius(@bor); // 3
+
+
+    &-reference {
+        padding: @classy-unit/2 @classy-unit; // 1
+        margin: 0;
+
+        background: @c;
+        color: @b;
+        .border-top-left-radius(@bor); // 3
+        .border-top-right-radius(@bor); // 3
+    }
+
+
+    &-description {
+        padding: @classy-unit; // 1
+
+        background: @b;
+        border-bottom: 1px solid @bo; // 2
+    }
+
+
+    &-element {
+        padding: @classy-unit; // 1
+        position: relative; // 4
+
+
+        &+& { border-top: 1px solid @bo; } // 2
+    }
+
+
+        &-modifier {
+            position: absolute; // 4
+            top: -1px; // 4
+            right: -1px; // 4
+            padding: @classy-unit/4 @classy-unit/2;
+
+            background: @b;
+            border: 1px solid @bo;
+            color: @c;
+        }
+
+
+    &-html {
+        padding: @classy-unit/2 @classy-unit; // 1
+
+        background: @b;
+        border-top: 1px solid @bo; // 2
+    }
+}
