@@ -19,12 +19,16 @@
 //    value and don't override parent's element.
 // 4. Use relative position to create a new positioning context and to pull
 //    element modifier to the upper right edge.
+// 5. Add a gap between sections.
 .@{classy-style-guide-namespace} {
     #classy-style-guide-vars;
 
 
     border: 1px solid @bo; // 2
     .border-radius(@bor); // 3
+
+    margin-bottom: @classy-unit; // 5
+    &:last-child { margin-bottom: 0; } // 5
 
 
     &-reference {
