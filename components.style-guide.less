@@ -15,8 +15,8 @@
 // 1. Add a more empty space for breeze.
 // 2. Use tiny border to separate subsections (and elements as well) from
 //    each other.
-// 3. Apply border radius to element. Ensure the guide reference uses the same
-//    value and don't override parent's element.
+// 3. Apply border radius to element. Ensure the guide reference and html
+//    example use the same value and don't override parent's element.
 // 4. Use relative position to create a new positioning context and to pull
 //    element modifier to the upper right edge.
 // 5. Add a gap between sections.
@@ -76,5 +76,7 @@
 
         background: @b;
         border-top: 1px solid @bo; // 2
+        .border-bottom-left-radius(@bor); // 3
+        .border-bottom-right-radius(@bor); // 3
     }
 }
