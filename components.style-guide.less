@@ -27,7 +27,7 @@
 
 
     border: 1px solid @bo; // 2
-    .border-radius(@bor); // 3
+    border-radius: @bor; // 3
 
     margin-bottom: @classy-unit; // 5
     &:last-child { margin-bottom: 0; } // 5
@@ -39,8 +39,9 @@
 
         background: @c;
         color: @b;
-        .border-top-left-radius(@bor); // 3
-        .border-top-right-radius(@bor); // 3
+
+        border-top-left-radius: @bor; // 3
+        border-top-right-radius: @bor; // 3
     }
 
 
