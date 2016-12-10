@@ -14,7 +14,6 @@
   "license": "MIT",
   "dependencies": {
     "classy-code": "~0.1.0",
-    "classy-defaults": "~0.2.2",
-    "lesshat": "~3.0.2"
+    "classy-defaults": "~0.2.2"
   }
 }
