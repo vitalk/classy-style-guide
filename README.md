@@ -16,12 +16,12 @@ bower install --save classy-style-guide
 
 ```jinja
 <article class="style-guide" id="{{ section.section }}">
-  <h3 class="style-guide-reference">{{ section.section }}</h3>
+  <h3 class="style-guide__reference">{{ section.section }}</h3>
 
-  <div class="style-guide-description">
+  <div class="style-guide__description">
     <p>{{ section.description|safe }}</p>
     {% if section.modifiers %}
-      <ul class="style-guide-modifiers">
+      <ul class="style-guide__modifiers">
         {% for m in section.modifiers %}
           <li><strong>{{ m.name }}</strong> - {{ m.description }}</li>
         {% endfor %}
@@ -29,18 +29,18 @@ bower install --save classy-style-guide
     {% endif %}
   </div>
 
-  <div class="style-guide-element">
+  <div class="style-guide__element">
     {{ section.example|safe }}
   </div>
 
   {% for m in section.modifiers %}
-    <div class="style-guide-element">
-      <small class="style-guide-modifier">{{ m.name }}</small>
+    <div class="style-guide__element">
+      <small class="style-guide__modifier">{{ m.name }}</small>
       {{ m.example|safe }}
     </div>
   {% endfor %}
 
-  <div class="style-guide-html">
+  <div class="style-guide__html">
     <pre>{{ section.example|forceescape }}</pre>
   </div>
 </article>
